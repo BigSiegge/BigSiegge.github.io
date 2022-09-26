@@ -1,5 +1,5 @@
 ---
-title: Fortune 500 Analysis
+title: "Fortune 500 Analysis"
 layout: post
 ---
 
