@@ -17,7 +17,7 @@ minimal: false             # use a dark header
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "projects.md", title: "Projects"}
-  - {url: "https://drive.google.com/file/d/1sJrWG_FdouaL4W8QXXvDALIBP1ZJ-bnj/view", title: "My Resume"}
+  - {file: "Nacion_Siegfried2024.pdf", title: "My Resume"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Mail, icon: envelope, url: "mailto:siegproduction1@gmail.com"}
