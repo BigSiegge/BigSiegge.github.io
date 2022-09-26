@@ -1,6 +1,14 @@
 ---
 layout: page
-title: front
+title: 
 ---
 
+
+
+
+
+
+<p align="center">
 this is my index page
+</p>
+
