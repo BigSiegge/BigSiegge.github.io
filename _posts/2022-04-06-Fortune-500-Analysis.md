@@ -12,5 +12,5 @@ The Jupyter notebook that contains all the Python code and Matplotlib utlization
 
 
 
-[here]: fortune500_analysis.ipynb
-[this]: fortune500_1955_2013.csv
+[here]: "fortune500_analysis.ipynb"
+[this]: "fortune500_1955_2013.csv"
