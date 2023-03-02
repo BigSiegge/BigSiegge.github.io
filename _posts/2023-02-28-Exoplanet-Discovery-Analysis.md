@@ -23,14 +23,15 @@ import pandas as pd
 df = pd.read_csv('exoplanets.csv')
 df
 ```
-method  number  orbital_period    mass  distance  year
-398  Radial Velocity       2      103.490000  0.0400     26.21  2011
-390  Radial Velocity       2       13.186000  0.0263     42.52  2011
-629  Radial Velocity       3      147.730000  1.2800     52.88  2006
-475  Radial Velocity       3      106.720000  0.0300     14.56  2011
-297  Radial Velocity       3     2295.000000  0.6830     33.24  2002
-662          Transit       2        0.837495     NaN    173.00  2011
-298  Radial Velocity       3      843.600000  0.6240     33.24  2005
-740          Transit       4        9.673928     NaN       NaN  2012
-471  Radial Velocity       3      459.260000  0.1210     26.91  2011
-500  Radial Velocity       2      408.600000  2.2400     68.54  2004
+|     | method          |   number |   orbital_period |     mass |   distance |   year |
+|----:|:----------------|---------:|-----------------:|---------:|-----------:|-------:|
+| 863 | Transit         |        2 |         25.5169  | nan      |     nan    |   2014 |
+| 163 | Transit         |        1 |         10.8635  | nan      |     190    |   2010 |
+| 177 | Transit         |        1 |          3.25721 | nan      |     395    |   2011 |
+| 760 | Transit         |        2 |          5.72932 | nan      |     nan    |   2012 |
+| 820 | Transit         |        7 |         59.7367  | nan      |     780    |   2013 |
+| 473 | Radial Velocity |        3 |         11.577   |   0.0166 |      14.56 |   2011 |
+| 772 | Transit         |        5 |         18.1641  | nan      |     368    |   2013 |
+| 345 | Radial Velocity |        1 |        589.64    |   2.9    |      10.34 |   2006 |
+| 867 | Transit         |        2 |         42.882   | nan      |     nan    |   2013 |
+| 494 | Radial Velocity |        1 |       2097       |   3      |      85.18 |   2009 |
