@@ -23,17 +23,16 @@ import pandas as pd
 df = pd.read_csv('exoplanets.csv')
 df
 ```
-
-mass  distance  year
-0     Radial Velocity       1      269.300000   7.10     77.40  2006
-1     Radial Velocity       1      874.774000   2.21     56.95  2008
-2     Radial Velocity       1      763.000000   2.60     19.84  2011
-3     Radial Velocity       1      326.030000  19.40    110.62  2007
-4     Radial Velocity       1      516.220000  10.50    119.47  2009
-...               ...     ...             ...    ...       ...   ...
-1030          Transit       1        3.941507    NaN    172.00  2006
-1031          Transit       1        2.615864    NaN    148.00  2007
-1032          Transit       1        3.191524    NaN    174.00  2007
-1033          Transit       1        4.125083    NaN    293.00  2008
-1034          Transit       1        4.187757    NaN    260.00  2008
+|    | method          |   number |   orbital_period |   mass |   distance |   year |
+|---:|:----------------|---------:|-----------------:|-------:|-----------:|-------:|
+|  0 | Radial Velocity |        1 |          269.3   |   7.1  |      77.4  |   2006 |
+|  1 | Radial Velocity |        1 |          874.774 |   2.21 |      56.95 |   2008 |
+|  2 | Radial Velocity |        1 |          763     |   2.6  |      19.84 |   2011 |
+|  3 | Radial Velocity |        1 |          326.03  |  19.4  |     110.62 |   2007 |
+|  4 | Radial Velocity |        1 |          516.22  |  10.5  |     119.47 |   2009 |
+|  5 | Radial Velocity |        1 |          185.84  |   4.8  |      76.39 |   2008 |
+|  6 | Radial Velocity |        1 |         1773.4   |   4.64 |      18.15 |   2002 |
+|  7 | Radial Velocity |        1 |          798.5   | nan    |      21.41 |   1996 |
+|  8 | Radial Velocity |        1 |          993.3   |  10.3  |      73.1  |   2008 |
+|  9 | Radial Velocity |        2 |          452.8   |   1.99 |      74.79 |   2010 |
 
