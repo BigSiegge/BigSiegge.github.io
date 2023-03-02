@@ -23,7 +23,7 @@ import pandas as pd
 df = pd.read_csv('exoplanets.csv')
 df
 ```
-<bound method DataFrame.to_markdown of               method  number  orbital_period    mass  distance  year
+method  number  orbital_period    mass  distance  year
 398  Radial Velocity       2      103.490000  0.0400     26.21  2011
 390  Radial Velocity       2       13.186000  0.0263     42.52  2011
 629  Radial Velocity       3      147.730000  1.2800     52.88  2006
@@ -33,4 +33,4 @@ df
 298  Radial Velocity       3      843.600000  0.6240     33.24  2005
 740          Transit       4        9.673928     NaN       NaN  2012
 471  Radial Velocity       3      459.260000  0.1210     26.91  2011
-500  Radial Velocity       2      408.600000  2.2400     68.54  2004>
+500  Radial Velocity       2      408.600000  2.2400     68.54  2004
