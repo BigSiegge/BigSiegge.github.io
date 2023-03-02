@@ -30,9 +30,4 @@ df
 |  2 | Radial Velocity |        1 |          763     |   2.6  |      19.84 |   2011 |
 |  3 | Radial Velocity |        1 |          326.03  |  19.4  |     110.62 |   2007 |
 |  4 | Radial Velocity |        1 |          516.22  |  10.5  |     119.47 |   2009 |
-|  5 | Radial Velocity |        1 |          185.84  |   4.8  |      76.39 |   2008 |
-|  6 | Radial Velocity |        1 |         1773.4   |   4.64 |      18.15 |   2002 |
-|  7 | Radial Velocity |        1 |          798.5   | nan    |      21.41 |   1996 |
-|  8 | Radial Velocity |        1 |          993.3   |  10.3  |      73.1  |   2008 |
-|  9 | Radial Velocity |        2 |          452.8   |   1.99 |      74.79 |   2010 |
 
