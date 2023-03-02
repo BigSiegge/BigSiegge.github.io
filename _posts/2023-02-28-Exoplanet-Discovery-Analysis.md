@@ -23,15 +23,15 @@ import pandas as pd
 df = pd.read_csv('exoplanets.csv')
 df
 ```
-|     | method          |   number |   orbital_period |     mass |   distance |   year |
-|----:|:----------------|---------:|-----------------:|---------:|-----------:|-------:|
-| 863 | Transit         |        2 |         25.5169  | nan      |     nan    |   2014 |
-| 163 | Transit         |        1 |         10.8635  | nan      |     190    |   2010 |
-| 177 | Transit         |        1 |          3.25721 | nan      |     395    |   2011 |
-| 760 | Transit         |        2 |          5.72932 | nan      |     nan    |   2012 |
-| 820 | Transit         |        7 |         59.7367  | nan      |     780    |   2013 |
-| 473 | Radial Velocity |        3 |         11.577   |   0.0166 |      14.56 |   2011 |
-| 772 | Transit         |        5 |         18.1641  | nan      |     368    |   2013 |
-| 345 | Radial Velocity |        1 |        589.64    |   2.9    |      10.34 |   2006 |
-| 867 | Transit         |        2 |         42.882   | nan      |     nan    |   2013 |
-| 494 | Radial Velocity |        1 |       2097       |   3      |      85.18 |   2009 |
+| method          |   number |   orbital_period |   mass |   distance |   year |
+|:----------------|---------:|-----------------:|-------:|-----------:|-------:|
+| Radial Velocity |        1 |          269.3   |   7.1  |      77.4  |   2006 |
+| Radial Velocity |        1 |          874.774 |   2.21 |      56.95 |   2008 |
+| Radial Velocity |        1 |          763     |   2.6  |      19.84 |   2011 |
+| Radial Velocity |        1 |          326.03  |  19.4  |     110.62 |   2007 |
+| Radial Velocity |        1 |          516.22  |  10.5  |     119.47 |   2009 |
+| Radial Velocity |        1 |          185.84  |   4.8  |      76.39 |   2008 |
+| Radial Velocity |        1 |         1773.4   |   4.64 |      18.15 |   2002 |
+| Radial Velocity |        1 |          798.5   | nan    |      21.41 |   1996 |
+| Radial Velocity |        1 |          993.3   |  10.3  |      73.1  |   2008 |
+| Radial Velocity |        2 |          452.8   |   1.99 |      74.79 |   2010 |
