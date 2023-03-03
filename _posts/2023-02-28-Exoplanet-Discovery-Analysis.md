@@ -23,6 +23,7 @@ import pandas as pd
 df = pd.read_csv('exoplanets.csv')
 df
 ```
+
 | method          |   number |   orbital_period |   mass |   distance |   year |
 |:----------------|---------:|-----------------:|-------:|-----------:|-------:|
 | Radial Velocity |        1 |          269.3   |   7.1  |      77.4  |   2006 |
