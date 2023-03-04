@@ -131,7 +131,7 @@ Here's a visualization of all the missing values in our dataset.
 sns.heatmap(df.isnull(), cbar = False, yticklabels= False)
 ```
 
-![na_count_heatmap](/assets/sns.heatmap(df.isna(), cbar = False, yticklabels = False.png)
+![na_count_heatmap](/assets/sns.heatmap(df.isna.png)
 
 In the end, I decided to leave the dataset, as is. 
 
