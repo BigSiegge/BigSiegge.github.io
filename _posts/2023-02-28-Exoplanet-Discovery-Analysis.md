@@ -48,7 +48,7 @@ df.info()
 
 RangeIndex: 1035 entries, 0 to 1034
 Data columns (total 6 columns):
- 
+
 | column                    |       Non-Null Count |                Dtype |
 |:-------------------------:|---------------------:|---------------------:|
 | method                    |        1035 non-null |               object | 
@@ -57,6 +57,7 @@ Data columns (total 6 columns):
 | mass                      |         513 non-null |              float64 |
 | distance                  |         808 non-null |              float64 |
 | year                      |        1035 non-null |                int64 |
+
  
  ```
  df[(df['orbital_period'].isnull() & df['mass'].isnull() & df['distance'].isnull())]
