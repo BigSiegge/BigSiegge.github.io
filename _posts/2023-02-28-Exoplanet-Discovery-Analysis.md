@@ -36,3 +36,43 @@ df
 | Radial Velocity |        1 |          798.5   | nan    |      21.41 |   1996 |
 | Radial Velocity |        1 |          993.3   |  10.3  |      73.1  |   2008 |
 | Radial Velocity |        2 |          452.8   |   1.99 |      74.79 |   2010 |
+
+How many exoplanets are missing values for all 3 planet characteristics at once (mass, orbital
+period, and distance)?
+
+Before I fully do the proper slicing to find how many of these entires from the dataframe have missing values for the three main columns, I just want to get an idea of how many missing values I'm dealing with as a whole. 
+
+```
+df.info()
+```
+
+RangeIndex: 1035 entries, 0 to 1034
+Data columns (total 6 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   method          1035 non-null   object 
+ 1   number          1035 non-null   int64  
+ 2   orbital_period  992 non-null    float64
+ 3   mass            513 non-null    float64
+ 4   distance        808 non-null    float64
+ 5   year            1035 non-null   int64  
+ 
+ ```
+ df[(df['orbital_period'].isnull() & df['mass'].isnull() & df['distance'].isnull())]
+ ```
+
+| method                    |   number |   orbital_period |   mass |   distance |   year |
+|:--------------------------|---------:|-----------------:|-------:|-----------:|-------:|
+| Imaging                   |        1 |              nan |    nan |        nan |   2008 |
+| Imaging                   |        1 |              nan |    nan |        nan |   2006 |
+| Transit Timing Variations |        3 |              nan |    nan |        nan |   2014 |
+| Microlensing              |        1 |              nan |    nan |        nan |   2008 |
+| Microlensing              |        1 |              nan |    nan |        nan |   2008 |
+| Microlensing              |        1 |              nan |    nan |        nan |   2009 |
+| Microlensing              |        1 |              nan |    nan |        nan |   2010 |
+| Microlensing              |        1 |              nan |    nan |        nan |   2004 |
+| Microlensing              |        1 |              nan |    nan |        nan |   2009 |
+| Imaging                   |        1 |              nan |    nan |        nan |   2010 |
+| Imaging                   |        1 |              nan |    nan |        nan |   2008 |
+
+Here we can see the 11 total discoveries that had orbital period, mass, and distance as unknown values. 
