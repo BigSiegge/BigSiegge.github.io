@@ -158,7 +158,7 @@ methods_above_75th_series = most_common_methods_df[df['distance'] > 178.5]['meth
 methods_above_75th_series.value_counts().plot.bar()
 ```
 
-![methods_value_count_bar](/assets/methods_above_75th_series.value_counts().plot.bar.png)
+![methods_value_count_bar](/assets/methods_above_75th_series.value_counts.plot.bar.png)
 
 And as you can see, the 'Transit' method of discovery is most common with finding exoplanets that are far away
 
