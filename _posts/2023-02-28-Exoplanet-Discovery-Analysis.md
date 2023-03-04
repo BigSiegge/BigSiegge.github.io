@@ -108,7 +108,61 @@ df['method'].value_counts().plot.bar()
 # Imaging are the three most common discovery methods
 ```
 
-![title](/assets/df['method'].value_counts().plot.bar().png)
+![method_value_counts_bar_graph](/assets/df['method'].value_counts().plot.bar().png)
+
+Now that I know which are the three most common discoevry methods, I'll just create a separate dataframe that I can work with. 
+
+```
+most_common_methods_df = df[(df['method'] == 'Radial Velocity') | (df['method'] == 'Transit') 
+   | (df['method'] == 'Radial Velocity')]
+```
+
+Before I start to find the basis for what constitutes a "faraway planet", I was thinking about whether or not I should cleanup outliers or missing values for some of these entries. I ran some code to find out that more than half of the dataframe has rows that has at least one column of data missing. So I had a bit of conflict as to how I should approach cleaning this up. Here were options that I thought I had: 
+
+1) Get rid of all the rows that have missing values. This would lead to a loss of more than 50% of our data. I thought this was too drastic.
+2) Get rid of any column that has a missing value. I also thought this was a bad idea. To my knowledge, there were only three columns in this dataframe that pertained to rudimentary information about these planets. Getting rid of even one column would lose me 1/3 of my columns, also too drastic. 
+3) I could just leave it. 
+
+Here's a visualization of all the missing values in our dataset. 
+
+```
+sns.heatmap(df.isnull(), cbar = False, yticklabels= False)
+```
+
+![na_count_heatmap](/assets/sns.heatmap(df.isna(), cbar = False, yticklabels = False.png)
+
+In the end, I decided to leave the dataset, as is. 
+
+Now, I just want to find out what's considered a "faraway planet". 
+
+```
+df['distance'].describe()
+
+# I see that the 75th percentile lies at 178.5 units of distance. So I'll consider that my cutoff
+```
+
+|       |   distance |
+|:------|-----------:|
+| count |    808     |
+| mean  |    264.069 |
+| std   |    733.116 |
+| min   |      1.35  |
+| 25%   |     32.56  |
+| 50%   |     55.25  |
+| 75%   |    178.5   |
+| max   |   8500     |
+
+
+```
+methods_above_75th_series = most_common_methods_df[df['distance'] > 178.5]['method']
+# So here's a series object that contains all the planets beyond 178.5 units of distance
+
+methods_above_75th_series.value_counts().plot.bar()
+```
+
+![methods_value_count_bar](/assets/methods_above_75th_series.value_counts().plot.bar.png)
+
+And as you can see, the 'Transit' method of discovery is most common with finding exoplanets that are far away
 
 
 
