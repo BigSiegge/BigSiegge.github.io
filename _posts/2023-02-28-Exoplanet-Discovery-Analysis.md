@@ -37,8 +37,9 @@ df
 | Radial Velocity |        1 |          993.3   |  10.3  |      73.1  |   2008 |
 | Radial Velocity |        2 |          452.8   |   1.99 |      74.79 |   2010 |
 
-How many exoplanets are missing values for all 3 planet characteristics at once (mass, orbital
-period, and distance)?
+*How many exoplanets are missing values for all 3 planet characteristics at once (mass, orbital
+period, and distance)?*
+
 
 Before I fully do the proper slicing to find how many of these entires from the dataframe have missing values for the three main columns, I just want to get an idea of how many missing values I'm dealing with as a whole. 
 
@@ -79,4 +80,35 @@ Data columns (total 6 columns):
 
 Here we can see the 11 total discoveries that had orbital period, mass, and distance as unknown values. 
 
-Were there any years between 1989 and 2014 where no exoplanets were discovered? 
+
+*Were there any years between 1989 and 2014 where no exoplanets were discovered?*
+
+
+So I'd like to attack this problem with some simple Python. I'd like to put the years (1989 - 2014) in a set. I would also like to put all the unique values, in the 'year' column from the dataframe, into a set. Then, from there I can just compare values that are in the (1989 - 2014) set, that aren't in the unique values set.
+
+```
+years_column_set = set(df['year'].unique())
+years_set = set(range(1989, 2015))
+
+years_set.difference(years_column_set)
+
+>>> {1990, 1991, 1993}
+```
+
+Strangely, there were no planets found in almost a 4 year span between 1990 and 1993. 
+
+
+*Out of the 3 most common discovery methods, which appears to be the most capable of finding
+faraway exoplanets?*
+
+```
+df['method'].value_counts().plot.bar()
+
+# here I can see that Radial Velocity, Transit, and 
+# Imaging are the three most common discovery methods
+```
+
+![Graph](/Users/siegfriedhaaan/Desktop/Screen Shot 2023-03-03 at 7.51.04 PM.png)
+
+
+
