@@ -48,14 +48,6 @@ df.info()
 
 RangeIndex: 1035 entries, 0 to 1034
 Data columns (total 6 columns):
- #   Column          Non-Null Count  Dtype  
----  ------          --------------  -----  
- 0   method          1035 non-null   object 
- 1   number          1035 non-null   int64  
- 2   orbital_period  992 non-null    float64
- 3   mass            513 non-null    float64
- 4   distance        808 non-null    float64
- 5   year            1035 non-null   int64  
  
 | column                    |       Non-Null Count |                Dtype |
 |:-------------------------:|---------------------:|---------------------:|
