@@ -120,7 +120,9 @@ most_common_methods_df = df[(df['method'] == 'Radial Velocity') | (df['method'] 
 Before I start to find the basis for what constitutes a "faraway planet", I was thinking about whether or not I should cleanup outliers or missing values for some of these entries. I ran some code to find out that more than half of the dataframe has rows that has at least one column of data missing. So I had a bit of conflict as to how I should approach cleaning this up. Here were options that I thought I had: 
 
 1) Get rid of all the rows that have missing values. This would lead to a loss of more than 50% of our data. I thought this was too drastic.
+
 2) Get rid of any column that has a missing value. I also thought this was a bad idea. To my knowledge, there were only three columns in this dataframe that pertained to rudimentary information about these planets. Getting rid of even one column would lose me 1/3 of my columns, also too drastic. 
+
 3) I could just leave it. 
 
 Here's a visualization of all the missing values in our dataset. 
