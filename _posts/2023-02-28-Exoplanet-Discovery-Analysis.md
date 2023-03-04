@@ -108,7 +108,7 @@ df['method'].value_counts().plot.bar()
 # Imaging are the three most common discovery methods
 ```
 
-![Graph](/Users/siegfriedhaaan/Desktop/df['method'].value_counts().plot.bar().png)
+![title](/assets/df['method'].value_counts().plot.bar().png)
 
 
 
