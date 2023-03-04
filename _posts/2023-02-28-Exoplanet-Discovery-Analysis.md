@@ -106,7 +106,7 @@ df['method'].value_counts().plot.bar()
 
 ![method_value_counts_bar_graph](/assets/df['method'].value_counts.plot.bar.png)
 
-Now that I know which are the three most common discoevry methods, I'll just create a separate dataframe that I can work with. 
+Now that I know which are the three most common discovery methods (being radial velocity, transit, and imaging), I'll just create a separate dataframe that I can work with. 
 
 ```
 most_common_methods_df = df[(df['method'] == 'Radial Velocity') | (df['method'] == 'Transit') 
