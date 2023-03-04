@@ -166,5 +166,26 @@ methods_above_75th_series.value_counts().plot.bar()
 
 And as you can see, the 'Transit' method of discovery is most common with finding exoplanets that are far away
 
+*What is the average distance of exoplanets whose mass is known? What is the average distance
+of exoplanets whose mass is unknown?*
 
+```
+df[df['mass'].notna()]['distance'].mean(), df[df['mass'].isna()]['distance'].mean()
+
+>>> (52.068212851405626, 604.638741935484)
+```
+
+It looks like the average distance for planets that have their mass known is significantly less than the average distance for planets that have unknown mass. It's safe to infer that the farther a planet is, the harder it is to gauge its mass. Compared to planets that are closer, it's easier to guage their mass since they're easier to study.
+
+
+*Which exoplanet discovery method is responsible for the most missing mass values?*
+
+```
+df[df['mass'].isna()]['method'].value_counts().plot.bar()
+```
+
+![mass_na_graph](/assets/df[df['mass'].isna]['method'].value_counts.png)
+
+
+So it looks like the transit method is responsible for the most missing mass values. I do think that this method is unsuitable for determining the mass of exoplanets. This could be because this method is specifically designed to only find planets that are unusually far. There could be a different method entirely dedicated towards finding out the mass of the planets from Transit. 
 
