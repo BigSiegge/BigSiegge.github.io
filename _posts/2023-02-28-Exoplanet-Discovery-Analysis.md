@@ -3,7 +3,7 @@ title: "Exoplanet Discovery Analysis"
 layout: post
 ---
 
-So I found this dataset containing exoplanet discoveries from 1989 to 2014. Here's a list of exploratory questions that I answered to get a better understanding of what's going on in this dataset. 
+So I found this [dataset](/assets/exoplanets.csv) containing exoplanet discoveries from 1989 to 2014. Here's a list of exploratory questions that I answered to get a better understanding of what's going on in this dataset. 
 
 1. How many exoplanets are missing values for all 3 planet characteristics at once (mass, orbital
 period, and distance)?
