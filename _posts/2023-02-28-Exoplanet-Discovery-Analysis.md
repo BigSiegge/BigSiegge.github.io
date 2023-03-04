@@ -57,6 +57,15 @@ Data columns (total 6 columns):
  4   distance        808 non-null    float64
  5   year            1035 non-null   int64  
  
+| column                    |       Non-Null Count |                Dtype |
+|:-------------------------:|---------------------:|---------------------:|
+| method                    |        1035 non-null |               object | 
+| number                    |        1035 non-null |                int64 |
+| orbital_period            |         992 non-null |              float64 |
+| mass                      |         513 non-null |              float64 |
+| distance                  |         808 non-null |              float64 |
+| year                      |        1035 non-null |                int64 |
+ 
  ```
  df[(df['orbital_period'].isnull() & df['mass'].isnull() & df['distance'].isnull())]
  ```
@@ -76,3 +85,5 @@ Data columns (total 6 columns):
 | Imaging                   |        1 |              nan |    nan |        nan |   2008 |
 
 Here we can see the 11 total discoveries that had orbital period, mass, and distance as unknown values. 
+
+Were there any years between 1989 and 2014 where no exoplanets were discovered? 
