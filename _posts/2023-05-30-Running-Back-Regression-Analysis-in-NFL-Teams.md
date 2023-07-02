@@ -18,23 +18,72 @@ layout: post
 ![figure](/assets/target_td_corr.png)
 
   With this group of subplots, it is easier to see the strong relationship that carries have with rush yards, yards after catch, and long runs. Here are statistical tests that I performed in conjunction with the graph above.
+  
 • Carries to Rush Yards:
-o Slope = 4.54, R-value = 0.89, P-value = 0.0
+  o Slope = 4.54, R-value = 0.89, P-value = 0.0
+
 • Carries to Rushing Yards after the Catch:
-o Slope = 2.19, R-value = 0.8, P-value = 0.0
+  o Slope = 2.19, R-value = 0.8, P-value = 0.0
+
 • Carries to Long Runs:
-o Slope = 1.02, R-value = 0.61, P-value = 0.0
+  o Slope = 1.02, R-value = 0.61, P-value = 0.0
+
 • Carries to Rushing Touchdowns:
-o Slope = 0.03, R-value = 0.48, P-value = 0.0
+  o Slope = 0.03, R-value = 0.48, P-value = 0.0
+
 • Targets to Receptions:
-o Slope = 0.78, R-value = 0.94, P-value = 0.0
+  o Slope = 0.78, R-value = 0.94, P-value = 0.0
+
 • Targets to Reception Yards:
-o Slope = 5.96, R-value = 0.79, P-value = 0.0
+  o Slope = 5.96, R-value = 0.79, P-value = 0.0
+
 • Targets to Reception Yards after the Catch:
-o Slope = 5.92, R-value = 0.80, P-value = 0.0
+  o Slope = 5.92, R-value = 0.80, P-value = 0.0
+
 • Targets to Reception Touchdowns:
-o Slope = 0.02, R-value = 0.25, P-value = 4.25
-One more comment on touchdowns, I can see that the P-value for carries to rushing touchdowns suggests the rejection of the null hypothesis. On the other hand, the P-value for targets to receiving touchdowns strong suggests that there is no correlation, even when they share similar slopes. It makes sense since only 25% of running backs average over the 75th quartile in average targets from 2019-2023. However, every other statistical test does make the case that an RB’s production mostly boils down to how many yards can they push the ball down the field. From this point on, I felt comfortable to start making production profiles for individual running backs.
+  o Slope = 0.02, R-value = 0.25, P-value = 4.25
+
+  One more comment on touchdowns, I can see that the P-value for carries to rushing touchdowns suggests the rejection of the null hypothesis. On the other hand, the P-value for targets to receiving touchdowns strong suggests that there is no correlation, even when they share similar slopes. It makes sense since only 25% of running backs average over the 75th quartile in average targets from 2019-2023. However, every other statistical test does make the case that an RB’s production mostly boils down to how many yards can they push the ball down the field. From this point on, I felt comfortable to start making production profiles for individual running backs.
 5
 
-Based on the correlations that I found, would I be able to contextualize a player’s spikes, dips, and stability in their production? The first player whose profile I decided to make was Christian McCaffrey’s, currently of the San Francisco 49ers.
+  Based on the correlations that I found, would I be able to contextualize a player’s spikes, dips, and stability in their production? The first player whose profile I decided to make was Christian McCaffrey’s, currently of the San Francisco 49ers.
+
+![figure](/assets/mccaffrey_prod_prof_2019_2023.png)
+
+Here are observations we can make from our subplots:
+
+• Total yards per game has a massive dip after 2019-2020 until a bit of a stabilization in
+2022-2023
+
+• Rush attempts per game also have a dip after the 2020-2021 season with increase in
+2022-2023
+
+• Targets per game also have a dip after the 2019-2020 season with stabilization and
+increase in 2022-2023
+
+• Other efficiency stats such as receptions, targets, rushing yards after catch, reception
+yards after catch, and yards per carry all have a dip and then stabilize in 2022-2023
+
+  Based on domain knowledge, this profile does correlate with his injury history and team change. His high ankle sprain, strained hamstring, and shoulder injuries caused him to only play 10 games in total between the 2020-2021 and 2021-2022 season. Therefore, his rush attempt per game does appear to have a spike in 2020-2021 since his season was only contained to 7 games. When he finally has a healthy season in 2022-2023, his workload and efficiency stats either begin to stabilize or even rise. However, it is unusual for somebody that has essentially missed two entire seasons of football, to immediately stabilize or even bump his production up. Since, Christian McCaffrey himself is an outlier player on his own, I do think it would be a misrepresentation of the average starting RB, to quantify his return to form. However, his trade from the Carolina Panthers to the San Francisco 49ers, in the middle of the 2022-2023 season, begs for further investigation. According to ESPN, In the 2022-2023 season, the Carolina Panthers were the 29th ranked offense in the NFL. On the other hand, the San Francisco 49ers were the 5th ranked offense in the NFL. This motivates the question of how his teammates’ production affected his efficiency.
+Let’s answer that question by creating, Minnesota Vikings RB1, Dalvin Cook’s production profile.
+
+![figure](/assets/cook_prod_prof_2019_2023.png)
+
+With no major injury history and trade that majorly affects Cook’s production, we can better see other reasons for his continual plunge as the years go on.
+
+• Total yards per game has a 21% increase in 2020-2021 but decreases 22% the next season, then by another 18% in 2022-2023
+
+• Rush Attempts has a similar pattern in change over the 4 seasons
+
+• Targets per game decreases every year
+
+• Other efficiency stats such as receptions, rushing yards after catch, reception yards after
+catch, and yards per carry all start to decrease
+  
+  Dalvin Cook, like McCaffrey, is a pass catching running back. 30% of his total yardage over
+4 seasons in the NFL, are reception yards. During our earlier analysis, we know that receptions and reception yards have a strong R-value of 0.84. Therefore, we can see why as his targets and receptions go down, his total yardage also goes down. Can we fault this steep decline in workload and efficiency to his wide receivers? Before we do that, let’s take a quick look at wide receiver workload and efficiency stats correlation.
+
+![figure](/assets/wr_performance_corr.png)
+
+  Wide receivers catch the ball more than running backs therefore, they also have a strong correlation with their target share and efficiency stats such as receptions, reception yards, air yards, and yards after catch. Now that we know that wide receivers have the same relationship between their workload and efficiency stats. Let’s look at Dalvin Cook’s target share compared to his other receivers’ target percentage over the years.
+
