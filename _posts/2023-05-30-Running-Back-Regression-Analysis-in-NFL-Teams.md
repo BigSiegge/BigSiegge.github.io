@@ -20,28 +20,28 @@ layout: post
   With this group of subplots, it is easier to see the strong relationship that carries have with rush yards, yards after catch, and long runs. Here are statistical tests that I performed in conjunction with the graph above.
   
 • Carries to Rush Yards:
-  o Slope = 4.54, R-value = 0.89, P-value = 0.0
+  Slope = 4.54, R-value = 0.89, P-value = 0.0
 
 • Carries to Rushing Yards after the Catch:
-  o Slope = 2.19, R-value = 0.8, P-value = 0.0
+  Slope = 2.19, R-value = 0.8, P-value = 0.0
 
 • Carries to Long Runs:
-  o Slope = 1.02, R-value = 0.61, P-value = 0.0
+  Slope = 1.02, R-value = 0.61, P-value = 0.0
 
 • Carries to Rushing Touchdowns:
-  o Slope = 0.03, R-value = 0.48, P-value = 0.0
+  Slope = 0.03, R-value = 0.48, P-value = 0.0
 
 • Targets to Receptions:
-  o Slope = 0.78, R-value = 0.94, P-value = 0.0
+  Slope = 0.78, R-value = 0.94, P-value = 0.0
 
 • Targets to Reception Yards:
-  o Slope = 5.96, R-value = 0.79, P-value = 0.0
+  Slope = 5.96, R-value = 0.79, P-value = 0.0
 
 • Targets to Reception Yards after the Catch:
-  o Slope = 5.92, R-value = 0.80, P-value = 0.0
+  Slope = 5.92, R-value = 0.80, P-value = 0.0
 
 • Targets to Reception Touchdowns:
-  o Slope = 0.02, R-value = 0.25, P-value = 4.25
+  Slope = 0.02, R-value = 0.25, P-value = 4.25
 
   One more comment on touchdowns, I can see that the P-value for carries to rushing touchdowns suggests the rejection of the null hypothesis. On the other hand, the P-value for targets to receiving touchdowns strong suggests that there is no correlation, even when they share similar slopes. It makes sense since only 25% of running backs average over the 75th quartile in average targets from 2019-2023. However, every other statistical test does make the case that an RB’s production mostly boils down to how many yards can they push the ball down the field. From this point on, I felt comfortable to start making production profiles for individual running backs.
 5
@@ -86,4 +86,22 @@ catch, and yards per carry all start to decrease
 ![figure](/assets/wr_performance_corr.png)
 
   Wide receivers catch the ball more than running backs therefore, they also have a strong correlation with their target share and efficiency stats such as receptions, reception yards, air yards, and yards after catch. Now that we know that wide receivers have the same relationship between their workload and efficiency stats. Let’s look at Dalvin Cook’s target share compared to his other receivers’ target percentage over the years.
+
+![figure](/assets/cook_target_share.png)
+
+  My suspicion in wide receiver production affecting running back production is starting to come into fruition. For the first season, we see the target share between Dalvin Cook and his other receivers’, distributed relatively evenly. Stefon Diggs slightly dominates the target percentage with Adam Thielen and other receivers having the 2nd larger share. Keep in mind, this is the year where his reception statistics are at their highest. By the next season, Stefon Diggs has
+been traded. He is replaced by a first-round future star wide receiver from LSU in Justin Jefferson. He immediately takes over and starts to demand a bigger share in the target percentage. Even Thielen starts to have a bigger share in pass plays. On the other hand, Cook’s rushing attempts and targets per game start decrease as Jefferson’s targets increase. Can we quantify the relationship between wide receiver production negatively affecting running back production?
+
+  To quantify this relationship, I took three random starting running backs’ attempts per game and compared them to their teammates’ targets per game for each season. The three running backs I chose were Dalvin Cook, Ezekiel Elliott from the Dallas Cowboys, and Derrick Henry from the Tennessee Titans.
+
+![figure](/assets/rush_att_reg_targets.png)
+
+  Even if this subset only consists of 3 teams in total, this subset is still big enough to be able to do statistical testing and infer that this relationship is representative of even more teams’ running back and wide receiver production.
+
+• Slope = -1.1, R-value = 0.78, P-value = 0.003
+
+  A P-value of 0.003 allows me to reject the null hypothesis of there being no relationship
+between wide receiver targets and running back rush attempts. The slope suggests that for every increase of 1 in total receivers’ targets, rush attempts decrease by 1.1.
+
+All in all, we were able find various reasons for inconsistencies in running back production. I took Christian McCaffrey’s performance profile and was able to contextualize his profile due to his injury history. His trade from a bottom ranked offensive team to a top ranked offensive team sparked for further investigation since his immediate return to producing high efficiency stats were unusual for somebody to have missed almost two seasons of football. Therefore, I made a production profile for Dalvin Cook, who has less of a major injury history and was not traded to a completely new team, leading to less variables to worry about. After seeing Dalvin Cook’s workload continually sink, I made a hypothesis that there was a negative correlation between a team’s wide receiver workload and a running back’s workload. First, I made a correlation graph to prove the correlation of a wide receiver’s workload with his efficiency. Statistical testing showed a strong relationship between targets and receptions. We also saw a strong correlation with receptions and reception yards. Therefore, I made a graph that showed how as Dalvin Cook’s target percentage went down, his receivers’ targets per game went up, which also explains why Cook’s efficiency and workload stats continually go down. Finally, to quantify this relationship, I took 3 individual running rush attempts over 4 seasons and found how they correlate with their receivers’ target numbers. Through the graph I made, I was able to confirm a negative linear regression. With a negative slope of 1.1 and a P-value of 0.03, the null hypothesis can be rejected, and it can be confirmed that there is indeed, a negative relationship between a running back’s and a wide receiver’s production. This relationship gets even deeper when you start to consider that not only wide receivers can be pass catchers. Tight ends can also take targets and carries away from a running back’s workload. Further investigation can also be done by looking at how a quarterback’s tendencies can affect a running back’s production. A team’s offensive line efficiency can also affect the running back. If we really wanted to stretch this, we could even look at how the opposing team’s defensive efficiency affects the running back, vice versa. These relationships can all be derived with the dataset that I selected. Studies like this could essentially be used to help a team find areas of their game that they need to improve on, such as, do they need to spend high draft capital to build on a certain area of the team? Alternatively, an analyst working for another team may do a study like this to identify weaknesses in the opponent team. Therefore, in an ethics conversation, this kind of data can be used to cause harm in a competitive sports setting. Which is why I imagine several NFL teams keep certain advanced analytics, that they derived on their own, away from the public eyes. This project really opened my mind in terms of the nuance of how many moving parts there are in NFL football. When you consider how many relationships there are between offense, defense, special teams, personnel, and even general management, you can make a strong argument in considering football as the most team-oriented sport of all.
 
